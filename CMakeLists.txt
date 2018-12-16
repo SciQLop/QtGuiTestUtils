@@ -9,7 +9,7 @@ FILE (GLOB_RECURSE  GUITestUtilsSources
 )
 
 add_library(GUITestUtils INTERFACE)
-target_link_libraries(GUITestUtils Qt5::Gui Qt5::Widgets Qt5::Test)
-target_include_directories(GUITestUtils PUBLIC
+target_link_libraries(GUITestUtils INTERFACE Qt5::Gui Qt5::Widgets Qt5::Test)
+target_include_directories(GUITestUtils INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>/
 )
