@@ -9,9 +9,9 @@
 #include <QPoint>
 #include <QtTest>
 
-#include <SqpApplication.h>
-#include <Variable/VariableController2.h>
-#include <qcustomplot.h>
+//#include <SqpApplication.h>
+//#include <Variable/VariableController2.h>
+//#include <qcustomplot.h>
 
 template <typename T>
 QPoint center(T* widget)
@@ -145,13 +145,14 @@ void scroll_graph(T* w, int dx)
     QTest::mouseRelease(w, Qt::LeftButton);
 }
 
-ALIAS_TEMPLATE_FUNCTION(isReady, static_cast<SqpApplication*>(qApp)->variableController().isReady)
-
+//ALIAS_TEMPLATE_FUNCTION(isReady, static_cast<SqpApplication*>(qApp)->variableController().isReady)
+/*
 void waitForVar(std::shared_ptr<Variable2> var)
 {
     while (!isReady(var))
         QCoreApplication::processEvents();
 }
+*/
 
 template <typename T>
 bool prepare_gui_test(T* w)
